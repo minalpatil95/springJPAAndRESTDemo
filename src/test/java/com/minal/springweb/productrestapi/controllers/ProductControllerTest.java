@@ -17,6 +17,7 @@ public class ProductControllerTest {
 
     @Test
     public void testGetProduct() {
+        System.out.println(baseURL);
         RestTemplate restTemplate = new RestTemplate();
         Product product = restTemplate.getForObject(baseURL + "/" +5, Product.class);
         assertNotNull(product);
